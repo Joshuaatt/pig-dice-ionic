@@ -24,6 +24,7 @@ function PigAiCtrl($scope, $state, PigAiFactory){
 
   $scope.p = function(playerNumber){
     if(PigAiFactory.activePlayer===playerNumber){
+
       return true;
     }else {
       return false;
@@ -36,6 +37,8 @@ function PigDiceCtrl($scope, $state, PigFactory){
 
   $scope.PigFactory = PigFactory;
   $scope.activePlayer = PigFactory.activePlayer;
+  $scope.playerActive = false;
+
 
   $scope.rollDice = function(){
     $scope.roll = PigFactory.rollDice();
@@ -53,6 +56,7 @@ function PigDiceCtrl($scope, $state, PigFactory){
 
   $scope.p = function(playerNumber){
     if(PigFactory.activePlayer===playerNumber){
+      $scope.playerActive = true;
       return true;
     }else {
       return false;

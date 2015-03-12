@@ -15,7 +15,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" ng-class="playerActive && 'background-color-black' || !playerActive && 'ion-color-dark'">
             <h2 id="player2">Player 2</h2>
             <h3>Score: {{ p2score }}</h3>
             <h3>Wins: <span id="player2wins"></span></h3>
@@ -40,3 +40,6 @@
     </div>
   </ion-content>
 </ion-view>
+
+<!-- background-color="{{ playerBackground }}" -->
+<!-- ng-class="{ 'player-active' : player == 1 }" -->
